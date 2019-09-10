@@ -1,0 +1,34 @@
+{
+  "name": "xtrabit.github.io",
+  "version": "1.0.0",
+  "description": "personal page",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "watch": "webpack --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xtrabit/xtrabit.github.io.git"
+  },
+  "author": "Alexei Sorokine",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xtrabit/xtrabit.github.io/issues"
+  },
+  "homepage": "https://github.com/xtrabit/xtrabit.github.io#readme",
+  "devDependencies": {
+    "@babel/core": "^7.5.4",
+    "@babel/preset-env": "^7.5.4",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.0.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-router-dom": "^5.0.1",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.35.3",
+    "webpack-cli": "^3.3.6"
+  }
+}
