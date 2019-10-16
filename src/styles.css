@@ -1,0 +1,10 @@
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.navigation-top-list li {
+  margin: 10px;
+  display: inline-block;
+  list-style-type: none;
+}
