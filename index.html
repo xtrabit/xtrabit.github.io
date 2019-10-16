@@ -1,11 +1,29 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>Alexei Sorokine</title>
-    </head>
-    <body>
-        <div id='app'></div>
-        <script src="static/bundle.js"></script>
-    </body>
+  <head>
+    <meta charset="utf-8">
+    <title>Alexei Sorokine</title>
+     <script type="text/javascript">
+      (function(loc) {
+        if (loc.search) {
+          const url = {};
+          loc.search.slice(1).split('&').forEach(section => {
+            const parts = section.split('=');
+            url[parts[0]] = parts.slice(1).join('=').replace(/~~~/g, '&');
+          });
+          if (url.path !== undefined) {
+            window.history.replaceState(
+              null,
+              '',
+              loc.pathname.slice(0, -1) + url.path + (url.params ? '?' + url.params : '') + loc.hash
+            );
+          }
+        }
+      }(window.location))
+    </script>
+  </head>
+  <body>
+    <div id='app'></div>
+    <script src="/static/bundle.js"></script>
+  </body>
 </html>

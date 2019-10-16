@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Single Page Apps for GitHub Pages</title>
+    <script type="text/javascript">
+      const loc = window.location;
+      const port = loc.port ? ':' + loc.port : '';
+      const uri = loc.protocol + '//' + loc.hostname + port;
+      const path = '/?path=/' + loc.pathname.slice(1).replace(/&/g, '~~~');
+      const params = loc.search ? '&params=' + loc.search.slice(1).replace(/&/g, '~~~') : '';
+      loc.replace(uri + path + params + loc.hash);
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
