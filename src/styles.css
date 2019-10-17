@@ -3,8 +3,32 @@ ul {
   padding: 0;
 }
 
+.navigation-top {
+  display: flex;
+  justify-content: center;
+}
+
 .navigation-top-list li {
   margin: 10px;
+
   display: inline-block;
   list-style-type: none;
+}
+
+main {
+  display: flex;
+  /*align-items: center;*/
+  justify-content: center;
+
+}
+section {
+  text-align: justify;
+  width: 580px;
+}
+
+@media(max-width: 620px) {
+  section {
+    /*text-align: justify;*/
+    width: 300px;
+  }
 }
