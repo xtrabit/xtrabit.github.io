@@ -10,25 +10,41 @@ ul {
 
 .navigation-top-list li {
   margin: 10px;
-
   display: inline-block;
   list-style-type: none;
+}
+
+.navigation-top-list a {
+  color: black;
+  text-decoration: none;
+  font-size: 32px;
 }
 
 main {
   display: flex;
   /*align-items: center;*/
   justify-content: center;
+  font-size: 20px;
 
 }
 section {
   text-align: justify;
-  width: 580px;
+  width: 720px;
 }
 
-@media(max-width: 620px) {
+@media(max-width: 760px) {
   section {
     /*text-align: justify;*/
     width: 300px;
   }
+
+  .home img {
+    height: 100px;
+    width: 133px;
+  }
+}
+
+.home img {
+  float: left;
+  margin: 10px;
 }

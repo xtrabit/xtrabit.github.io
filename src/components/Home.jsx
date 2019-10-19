@@ -13,8 +13,8 @@ export default class Home extends React.Component {
     return (
       <main>
         <section className='home'>
-          <h2>Alexei Sorokine</h2>
-          <h3>Software Engineer</h3>
+          <img src='/static/bender.gif' alt='Bender with a bowtie' height='200' width='266'/>
+          <h2>Welcome! I'm Alexei.</h2>
           <p>
             &emsp;I am a software engineer with main focus on React / Redux and Django / Python,
             and with experience in Node and embedded C.
