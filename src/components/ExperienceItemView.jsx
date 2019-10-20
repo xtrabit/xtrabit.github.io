@@ -23,7 +23,7 @@ export default function({ item }) {
             {breakStr(item.timeframe)}
           </time>
         </header>
-        <h4 className='job-title'>{item.title}</h4>
+        <h4 className='job-title'><em>{item.title}</em></h4>
         <ul className='details'>
           {
             item.details.map(detail => {
