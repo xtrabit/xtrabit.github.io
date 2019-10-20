@@ -23,7 +23,7 @@ export default class App extends React.Component {
     return (
       <div className='app-wrapper'>
         <Router>
-          <header>
+          <header className='navigation'>
             <nav className='navigation-top'>
               <ul className='navigation-top-list'>
                 <li>

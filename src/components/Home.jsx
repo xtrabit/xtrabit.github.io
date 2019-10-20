@@ -14,7 +14,7 @@ export default class Home extends React.Component {
       <main>
         <section className='home'>
           <img src='/static/bender.gif' alt='Bender with a bowtie' height='200' width='266'/>
-          <h3>Hi, <nobr>I'm Alexei</nobr></h3>
+          <h2>Hi, <nobr>I'm Alexei</nobr></h2>
           <p>
             &emsp;I am a software engineer with focus on React-Redux and Django-Python,
             and experience in Node and C.
