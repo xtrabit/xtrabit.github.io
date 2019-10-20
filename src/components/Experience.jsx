@@ -20,7 +20,7 @@ export default class Experience extends React.Component {
             experience.map(item => {
               return (
                 <li className='type'>
-                  <div className='sticky'><h2>{item.category}</h2></div>
+                  <div className='sticky'><h2>{'experience: ' + item.category}</h2></div>
                   <ul className='list'>
                       {item.list.map(sub => <ExperienceItemView item={sub} />)}
                   </ul>

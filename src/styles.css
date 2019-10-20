@@ -128,7 +128,10 @@ section.experience {
   display: inline-block;
   width: 100%;
   background-color: #beebc3;
-  border-bottom: 1px solid black;
+  border-top: 1px solid #cfd;
+  border-bottom: 1px solid #8b9;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
   padding: 0 10px;
   position: relative;
   left: -20px;
@@ -170,8 +173,10 @@ ul.list {
   padding-left: 10px;
   width: calc(100% + 30px);
   max-width: 810px;
-  /*border-top: 2px solid white;*/
-  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
+  border-top: 2px solid #c98b49;
+  border-bottom: 2px solid #794006;
+  border-radius: 3px;
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.4);
   text-shadow: 0 1px 2px #000;
 }
 
