@@ -11,9 +11,9 @@ export default class Skills extends React.Component {
 
   render() {
     return (
-      <div>
+      <main>
         skills
-      </div>
+      </main>
     )
   }
 }

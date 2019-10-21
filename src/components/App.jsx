@@ -13,13 +13,32 @@ export default class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-
+      brokenImg: []
     };
     this.marker = 'selected';
   }
 
-  componentDidMount() {
+  onBrokenImg(str) {
+    const state = [...this.state.brokenImg];
+    if (!state.includes(str)) {
+      state.push(str);
+      this.setState({brokenImg: state});
+    }
 
+  }
+
+  getIcon(str) {
+    return this.state.brokenImg.includes(str)
+      ? str
+      : (
+        <img
+          src={`/static/${str}.png`}
+          width='28px'
+          height='28px'
+          alt={str}
+          onError={() => this.onBrokenImg(str)}
+        />
+      );
   }
 
   render() {
@@ -30,22 +49,24 @@ export default class App extends React.Component {
             <nav className='navigation-top'>
               <ul className='navigation-top-list'>
                 <li>
-                  <Link to='/'><img src='/static/home.png' width='25px' height='25px' alt='home' style={{filter: 'invert(100%)'}}/></Link>
+                  <Link to='/'>{this.getIcon('home')}</Link>
                 </li>
                 <li>
-                  <Link to='/experience'><img src='/static/experience.png' width='25px' height='25px' alt='experience' style={{filter: 'invert(100%)'}}/></Link>
+                  <Link to='/experience'>
+                    {this.getIcon('experience')}
+                  </Link>
                 </li>
                 <li>
-                  <Link to='/skills'><img src='/static/skills.png' width='25px' height='25px' alt='skills' style={{filter: 'invert(100%)'}}/></Link>
+                  <Link to='/skills'>{this.getIcon('skills')}</Link>
                 </li>
                 <li>
-                  <Link to='/contact'><img src='/static/contact.png' width='25px' height='25px' alt='contact' style={{filter: 'invert(100%)'}}/></Link>
+                  <Link to='/contact'>{this.getIcon('contact')}</Link>
                 </li>
                 <li>
-                  <Link to='/about'><img src='/static/about.png' width='25px' height='25px' alt='about' style={{filter: 'invert(100%)'}}/></Link>
+                  <Link to='/about'>{this.getIcon('about')}</Link>
                 </li>
                 <li>
-                  <Link to='/info'><img src='/static/info.png' width='25px' height='25px' alt='info' style={{filter: 'invert(100%)'}}/></Link>
+                  <Link to='/info'>{this.getIcon('info')}</Link>
                 </li>
               </ul>
             </nav>

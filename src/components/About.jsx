@@ -11,9 +11,9 @@ export default class About extends React.Component {
 
   render() {
     return (
-      <div>
+      <main>
         about
-      </div>
+      </main>
     )
   }
 }

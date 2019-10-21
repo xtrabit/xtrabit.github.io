@@ -11,9 +11,9 @@ export default class Contact extends React.Component {
 
   render() {
     return (
-      <div>
+      <main>
         contact
-      </div>
+      </main>
     )
   }
 }
