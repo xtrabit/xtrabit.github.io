@@ -12,7 +12,7 @@ export default class Info extends React.Component {
   render() {
     return (
       <main>
-        info
+        about this page
       </main>
     )
   }

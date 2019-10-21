@@ -13,7 +13,8 @@ export default class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      brokenImg: []
+      brokenImg: [],
+      selected: 'home'
     };
     this.marker = 'selected';
   }
@@ -32,13 +33,25 @@ export default class App extends React.Component {
       ? str
       : (
         <img
-          src={`/static/${str}.png`}
+          src={`/static/${str}_112.png`}
           width='28px'
           height='28px'
           alt={str}
           onError={() => this.onBrokenImg(str)}
+          style={
+            this.state.selected === str
+              ? {filter: 'invert(65%) sepia(100%) hue-rotate(60deg) saturate(300%)'}
+              : {filter: 'invert(80%)'}
+          }
         />
       );
+  }
+
+  selectLink(str) {
+    if (this.state.selected !== str) {
+      console.log('clicked:', str);
+      this.setState({selected: str});
+    }
   }
 
   render() {
@@ -71,12 +84,36 @@ export default class App extends React.Component {
               </ul>
             </nav>
           </header>
-          <Route path='/' exact component={Home} />
-          <Route path='/experience' component={Experience} />
-          <Route path='/skills' component={Skills} />
-          <Route path='/contact' component={Contact} />
-          <Route path='/about' component={About} />
-          <Route path='/info' component={Info} />
+          <Route path='/' exact render={() => {
+                this.selectLink('home');
+              return <Home />;
+            }}
+          />
+          <Route path='/experience' render={() => {
+                this.selectLink('experience');
+              return <Experience />;
+            }}
+          />
+          <Route path='/skills' render={() => {
+                this.selectLink('skills');
+              return <Skills />;
+            }}
+          />
+          <Route path='/contact' render={() => {
+                this.selectLink('contact');
+              return <Contact />;
+            }}
+          />
+          <Route path='/about' render={() => {
+                this.selectLink('about');
+              return <About />;
+            }}
+          />
+          <Route path='/info' render={() => {
+                this.selectLink('info');
+              return <Info />;
+            }}
+          />
         </Router>
       </div>
     );

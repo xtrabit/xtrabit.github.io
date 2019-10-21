@@ -24,7 +24,7 @@ export default [
         ]
       },
       {
-        company: 'Xanoza (Hack Reactor)',
+        company: 'Xanoza',
         title: 'Full-stack Engineer',
         timeframe: 'March 2019',
         details: [
@@ -37,7 +37,7 @@ export default [
         ]
       },
       {
-        company: 'JJAM (Hack Reactor)',
+        company: 'JJAM',
         title: 'Full-stack Engineer',
         timeframe: 'February 2019',
         details: [
