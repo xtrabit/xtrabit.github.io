@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-export default class Info extends React.Component {
+export default class Bio extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -12,7 +12,7 @@ export default class Info extends React.Component {
   render() {
     return (
       <main>
-        about this page
+        bio
       </main>
     )
   }

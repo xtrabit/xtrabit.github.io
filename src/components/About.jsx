@@ -12,7 +12,7 @@ export default class About extends React.Component {
   render() {
     return (
       <main>
-        bio
+        about
       </main>
     )
   }

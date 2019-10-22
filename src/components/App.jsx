@@ -1,12 +1,12 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { Route, Link } from 'react-router-dom';
 import '../styles.css';
 import Home from './Home';
 import Experience from './Experience';
 import Skills from './Skills';
 import Contact from './Contact';
+import Bio from './Bio';
 import About from './About';
-import Info from './Info';
 
 
 export default class App extends React.Component {
@@ -14,30 +14,87 @@ export default class App extends React.Component {
     super(props);
     this.state = {
       brokenImg: [],
-      selected: 'home'
+      selected: 'home',
+      windowWidth: null
     };
-    this.marker = 'selected';
+    this.routes = [
+      {
+        name: 'home',
+        Component: Home
+      },
+      {
+        name: 'experience',
+        Component: Experience
+      },
+      {
+        name: 'skills',
+        Component: Skills
+      },
+      {
+        name: 'contact',
+        Component: Contact
+      },
+      {
+        name: 'bio',
+        Component: Bio
+      },
+      {
+        name: 'about',
+        Component: About
+      }
+    ];
+    this.nameMap = {
+      'home': <span>&#x2616;</span>,
+      'experience': <span>&#x2692;</span>,
+      'skills': <span>&#x2611;</span>,
+      'contact': '@',
+      'bio': 'bio',
+      'about': '?'
+    };
   }
 
-  onBrokenImg(str) {
-    const state = [...this.state.brokenImg];
-    if (!state.includes(str)) {
+  componentDidMount() {
+    let path = window.location.pathname.split('/')[1];
+    if (!path) {
+      path = 'home';
+      this.props.history.push('/home');
+    }
+    this.setState({
+      windowWidth: window.innerWidth,
+      selected: path
+    });
+    window.addEventListener("resize", () => this.setState({windowWidth: window.innerWidth}));
+  }
+
+  onBrokenImg(str, e) {
+    if (!this.state.brokenImg.includes(str)) {
+      const state = [...this.state.brokenImg];
       state.push(str);
       this.setState({brokenImg: state});
     }
 
   }
 
+  getMenuName(str) {
+    let shortStr = str;
+    if (this.state.windowWidth <= 810 || str === 'about') {
+      shortStr = this.nameMap[str];
+    }
+    return this.state.selected === str
+      ? <span style={{color: '#6fe747'}}>{shortStr}</span>
+      : shortStr;
+  }
+
   getIcon(str) {
-    return this.state.brokenImg.includes(str)
-      ? str
+    return this.state.brokenImg.includes(str) || (str !== 'about' && this.state.windowWidth > 810)
+      ? this.getMenuName(str)
       : (
         <img
-          src={`/static/${str}_112.png`}
+          src={`/static/${str}.png`}
           width='28px'
           height='28px'
           alt={str}
-          onError={() => this.onBrokenImg(str)}
+          onError={e => this.onBrokenImg(str, e)}
           style={
             this.state.selected === str
               ? {filter: 'invert(65%) sepia(100%) hue-rotate(60deg) saturate(300%)'}
@@ -49,7 +106,6 @@ export default class App extends React.Component {
 
   selectLink(str) {
     if (this.state.selected !== str) {
-      console.log('clicked:', str);
       this.setState({selected: str});
     }
   }
@@ -57,64 +113,33 @@ export default class App extends React.Component {
   render() {
     return (
       <div className='app-wrapper'>
-        <Router>
-          <header className='navigation'>
-            <nav className='navigation-top'>
-              <ul className='navigation-top-list'>
-                <li>
-                  <Link to='/'>{this.getIcon('home')}</Link>
-                </li>
-                <li>
-                  <Link to='/experience'>
-                    {this.getIcon('experience')}
-                  </Link>
-                </li>
-                <li>
-                  <Link to='/skills'>{this.getIcon('skills')}</Link>
-                </li>
-                <li>
-                  <Link to='/contact'>{this.getIcon('contact')}</Link>
-                </li>
-                <li>
-                  <Link to='/about'>{this.getIcon('about')}</Link>
-                </li>
-                <li>
-                  <Link to='/info'>{this.getIcon('info')}</Link>
-                </li>
-              </ul>
-            </nav>
-          </header>
-          <Route path='/' exact render={() => {
-                this.selectLink('home');
-              return <Home />;
-            }}
-          />
-          <Route path='/experience' render={() => {
-                this.selectLink('experience');
-              return <Experience />;
-            }}
-          />
-          <Route path='/skills' render={() => {
-                this.selectLink('skills');
-              return <Skills />;
-            }}
-          />
-          <Route path='/contact' render={() => {
-                this.selectLink('contact');
-              return <Contact />;
-            }}
-          />
-          <Route path='/about' render={() => {
-                this.selectLink('about');
-              return <About />;
-            }}
-          />
-          <Route path='/info' render={() => {
-                this.selectLink('info');
-              return <Info />;
-            }}
-          />
-        </Router>
+        <header className='navigation'>
+          <nav className='navigation-top'>
+            <ul className='navigation-top-list'>
+              {
+                this.routes.map(({ name }) => (
+                  <li key={name}>
+                    <Link
+                      to={'/' + name}
+                      onClick={() => this.selectLink(name)}
+                    >
+                      {this.getIcon(name)}
+                    </Link>
+                  </li>
+                ))
+              }
+            </ul>
+          </nav>
+        </header>
+        {
+          this.routes.map(({ name, Component }) => (
+            <Route
+              path={'/' + name} exact
+              component={Component}
+              key={'route_' + name}
+            />
+          ))
+        }
       </div>
     );
   }

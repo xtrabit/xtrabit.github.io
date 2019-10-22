@@ -4,9 +4,9 @@ import React from 'react';
 const breakStr = (str) => (
   str.split('-').map((elem, i, arr) => {
     if (!i) {
-      return <nobr>{elem.trim() + (arr.length > 1 ? ' -' : '')}</nobr>;
+      return <nobr key={elem + i}>{elem.trim() + (arr.length > 1 ? ' -' : '')}</nobr>;
     } else {
-      return <span> <nobr>{elem}</nobr></span>;
+      return <span key={elem + i}> <nobr>{elem}</nobr></span>;
     }
   })
 );
@@ -14,27 +14,27 @@ const breakStr = (str) => (
 
 export default function({ item }) {
   return (
-        <li>
-        <header>
-          <h3>
-            {breakStr(item.company)}
-          </h3>
-          <time>
-            {breakStr(item.timeframe)}
-          </time>
-        </header>
-        <h4 className='job-title'><em>{item.title}</em></h4>
-        <ul className='details'>
-          {
-            item.details.map(detail => {
-              return (
-                <li>
-                  {detail}
-                </li>
-              );
-            })
-          }
-        </ul>
-        </li>
+    <li>
+      <header>
+        <h3>
+          {breakStr(item.company)}
+        </h3>
+        <time>
+          {breakStr(item.timeframe)}
+        </time>
+      </header>
+      <h4 className='job-title'><em>{item.title}</em></h4>
+      <ul className='details'>
+        {
+          item.details.map((detail, i) => {
+            return (
+              <li key={item.company + i}>
+                {detail}
+              </li>
+            );
+          })
+        }
+      </ul>
+    </li>
   );
 }
