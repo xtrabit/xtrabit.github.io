@@ -1,19 +1,34 @@
 import React from 'react';
+import skills from './skills'
 
 
-export default class Skills extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-
-    };
-  }
-
-  render() {
-    return (
-      <main>
-        skills
-      </main>
-    )
-  }
+export default function() {
+  return (
+    <main>
+      <section className='skills'>
+        <ul className='type'>
+          {
+            skills.map((item, i) => {
+              return (
+                <li className='type' key={item.type + i}>
+                  <h4>
+                    {item.type}
+                  </h4>
+                  <ul className='horizontal'>
+                    {
+                      item.list.map((detail, i, arr) => (
+                        <li key={detail}>
+                          {detail}
+                        </li>
+                      ))
+                    }
+                  </ul>
+                </li>
+              );
+            })
+          }
+        </ul>
+      </section>
+    </main>
+  );
 }

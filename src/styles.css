@@ -88,6 +88,10 @@ section {
     line-height: 1.2;
   }
 
+  .horizontal li {
+    font-size: 0.9em;
+  }
+
   div.sticky {
     top: calc(24px + 1.5em);
   }
@@ -181,4 +185,23 @@ ul.list {
 
 .details li {
   list-style-type: circle;
+}
+
+ul.horizontal {
+  padding-left: 20px;
+}
+
+.horizontal li {
+  margin-right: 10px;
+  /*list-style-type: none;*/
+  /*float: left;*/
+  /*font-size: 0.9em;*/
+  position: relative;
+  justify-content: left;
+  top: -5px;
+  /*overflow: hidden;*/
+}
+
+li.type {
+  clear: both;
 }

@@ -48,7 +48,7 @@ export default class App extends React.Component {
       'experience': <span>&#x2692;</span>,
       'skills': <span>&#x2611;</span>,
       'contact': '@',
-      'bio': 'bio',
+      'bio': <span>(&#x30c4;)</span>,
       'about': '?'
     };
   }
