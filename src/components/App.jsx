@@ -15,7 +15,7 @@ export default class App extends React.Component {
     this.state = {
       brokenImg: [],
       selected: 'home',
-      windowWidth: null
+      windowWidth: null,
     };
     this.routes = [
       {
@@ -43,7 +43,7 @@ export default class App extends React.Component {
         Component: About
       }
     ];
-    this.nameMap = {
+    this.brokenImgNameMap = {
       'home': <span>&#x2616;</span>,
       'experience': <span>&#x2692;</span>,
       'skills': <span>&#x2611;</span>,
@@ -59,11 +59,11 @@ export default class App extends React.Component {
       path = 'home';
       this.props.history.push('/home');
     }
-    this.setState({
-      windowWidth: window.innerWidth,
-      selected: path
-    });
-    window.addEventListener("resize", () => this.setState({windowWidth: window.innerWidth}));
+    this.setState({windowWidth: window.innerWidth, selected: path});
+    window.addEventListener(
+      "resize",
+      () => this.setState({windowWidth: window.innerWidth})
+    );
   }
 
   onBrokenImg(str, e) {
@@ -72,13 +72,12 @@ export default class App extends React.Component {
       state.push(str);
       this.setState({brokenImg: state});
     }
-
   }
 
   getMenuName(str) {
     let shortStr = str;
     if (this.state.windowWidth <= 810 || str === 'about') {
-      shortStr = this.nameMap[str];
+      shortStr = this.brokenImgNameMap[str];
     }
     return this.state.selected === str
       ? <span style={{color: '#6fe747'}}>{shortStr}</span>
@@ -112,7 +111,7 @@ export default class App extends React.Component {
 
   render() {
     return (
-      <div className='app-wrapper'>
+      <div className='app'>
         <header className='navigation'>
           <nav className='navigation-top'>
             <ul className='navigation-top-list'>
@@ -140,6 +139,9 @@ export default class App extends React.Component {
             />
           ))
         }
+        <footer className='app'>
+          Under Construction
+        </footer>
       </div>
     );
   }

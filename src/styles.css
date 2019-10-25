@@ -193,15 +193,25 @@ ul.horizontal {
 
 .horizontal li {
   margin-right: 10px;
-  /*list-style-type: none;*/
-  /*float: left;*/
-  /*font-size: 0.9em;*/
   position: relative;
   justify-content: left;
   top: -5px;
-  /*overflow: hidden;*/
 }
 
 li.type {
   clear: both;
+}
+
+#app {
+  padding-bottom: 28px;
+}
+
+footer.app {
+  position: fixed;
+  bottom: 0;
+  background-color: black;
+  color:  #fcba03;
+  text-align: center;
+  width: 100%;
+  z-index: +1;
 }
