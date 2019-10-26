@@ -32,96 +32,12 @@ export default [
       'Custom tools design'
     ]
   },
-];
-
-const list = [
   {
-    type: 'languages',
+    type: 'electricity and electronics',
     list: [
-      'Python',
-      'Javascript',
-      'embedded C'
-    ]
-  },
-  {
-    type: 'frameworks',
-    list: [
-      'Django',
-      'React',
-      'Express'
-    ]
-  },
-  {
-    type: 'libraries',
-    list: [
-      'Redux',
-      'Google Maps'
-    ]
-  },
-  {
-    type: 'platforms',
-    list: [
-      'Node',
-      'Docker'
-    ]
-  },
-  {
-    type: 'messaging',
-    list: [
-      'Celery',
-      'Celery Beat',
-      'RabbitMQ',
-
-    ]
-  },
-  {
-    type: 'payment processing',
-    list: [
-      'Stripe',
-      'Braintree'
-    ]
-  },
-  {
-    type: 'databases',
-    list: [
-      'PostgeSQL',
-      'MySQL',
-      'MongoDB'
-    ]
-  },
-  {
-    type: 'collaboration',
-    list: [
-      'Slack',
-      'Jira',
-      'Confluence',
-      'Zoom',
-      'GitHub'
-    ]
-  },
-  {
-    type: 'testing',
-    list: [
-      'New Relic',
-      'Mocha / Chai',
-      'Jest / Enzyme',
-    ]
-  },
-  {
-    type: 'CAD',
-    list: [
-      'AutoCAD',
-      'SolidWorks',
-      'Photoshop',
-      'Cabinet Vision',
-      'Onshape'
-    ]
-  },
-  {
-    type: 'education',
-    list: [
-      'Hack Reactor, Advanced Software Engineering Immersive Program 2019',
-      'UC Berkeley, B.A. Architecture 2004'
+      'Design and troubleshoot systems in homes, vehicles, machines e.t.c.',
+      'Design and troubleshoot digital electronic circuits.',
+      'Ability to use oscilloscopes, function generators and multimeters.',
     ]
   }
 ];

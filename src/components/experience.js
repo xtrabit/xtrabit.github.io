@@ -7,6 +7,14 @@ export default [
         title: 'Backend Engineer Intern (Carsharing)',
         timeframe: 'September 2019 - Present',
         details: [
+          'Follow Agile methodology.',
+          'Participate in daily standups.',
+          'Communicate across teams to deliver precisely on requirements of a task.',
+          'Write API change proposals.',
+          'Write unit tests.',
+          'Integrated Phrase translation into microservices.',
+          'Worked on Braintree payment integration into existing platform.',
+
         ]
       },
       {
@@ -47,6 +55,19 @@ export default [
           'Created unit tests in Jest with Enzyme to ensure component  reliability.',
           'Improved performance by serving static content from AWS S3.'
         ]
+      },
+      {
+        company: 'Personal projects',
+        title: 'Software Engineer',
+        timeframe: '2010 - Present',
+        details: [
+          'Written RC signal mixers for motor drivers.',
+          'Piggibacked data on RC signal using 1/2 term series.',
+          'Created pseudo stability management based on analog gyro input.',
+          'Created motor drivers for brushed and three phase sensored brushless motors.',
+          'Managed non encrypted communication with sub-gigahertz transceivers.',
+          'Communicated with peripherals over UART, SPI and parallel port.'
+        ]
       }
     ]
   },
@@ -70,23 +91,45 @@ export default [
       {
         company: 'Opticomp Construction - Structural Steel Fabricators',
         title: 'Project Manager',
-        timeframe: 'January 2011 - December 2012',
+        timeframe: 'January 2010 - December 2012',
         details: [
           'Managed a team on-site and monitored project progress.',
           'Provided input on possible engineering approaches and time estimates for bids.',
-          'Designed and welded custom jigs to aid onsite assembly or to speed up production process.',
+          'Designed and welded custom jigs to aid in on-site assembly or to speed up production process.',
           'Assisted in manufacturing by welding and machining custom pieces on mill and lathe.'
+        ]
+      },
+      {
+        company: 'Kornach Construction',
+        title: 'Foreman',
+        timeframe: '2008 - 2010',
+        details: [
+          'Supervised workers on-site.',
+          'Found solutions to unexpected problems.',
+          'Monitored progress and sequenced tasks to deliver on schedule.',
+          'Took lead in dificult and non-ordinary tasks.',
         ]
       },
       {
         company: 'Design Built Systems',
         title: 'Junior Architect',
-        timeframe: 'December 2006 - December 2008',
+        timeframe: '2006 - 2008',
         details: [
           'Communicated design ideas to construction crew.',
           'Monitored on-site progress.',
           'Translated designs into construction documents in Autocad.',
           'Researched historical values of buildings.'
+        ]
+      },
+      {
+        company: 'Custom Tile',
+        title: 'Self-empoyed tile and stone installer.',
+        timeframe: '2004 - 2006',
+        details: [
+          'Negotiated contracts.',
+          'Created designs.',
+          'Sourced materials.',
+          'Performed installations.'
         ]
       }
     ]
