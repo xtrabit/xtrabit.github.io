@@ -35,9 +35,9 @@ export default [
   {
     type: 'electricity and electronics',
     list: [
-      'Design and troubleshoot systems in homes, vehicles, machines e.t.c.',
+      'Design and troubleshoot systems in homes, vehicles, machines etc.',
       'Design and troubleshoot digital electronic circuits.',
-      'Ability to use oscilloscopes, function generators and multimeters.',
+      'Ability to use oscilloscopes, function generators and multi-meters.',
     ]
   }
 ];

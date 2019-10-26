@@ -62,9 +62,9 @@ export default [
         timeframe: '2010 - Present',
         details: [
           'Written RC signal mixers for motor drivers.',
-          'Piggibacked data on RC signal using 1/2 term series.',
+          'Piggybacked data on RC signal using 1/2 term series.',
           'Created pseudo stability management based on analog gyro input.',
-          'Created motor drivers for brushed and three phase sensored brushless motors.',
+          'Created motor drivers for brushed and three phase censored brush-less motors.',
           'Managed non encrypted communication with sub-gigahertz transceivers.',
           'Communicated with peripherals over UART, SPI and parallel port.'
         ]
@@ -107,7 +107,7 @@ export default [
           'Supervised workers on-site.',
           'Found solutions to unexpected problems.',
           'Monitored progress and sequenced tasks to deliver on schedule.',
-          'Took lead in dificult and non-ordinary tasks.',
+          'Took lead in difficult and non-ordinary tasks.',
         ]
       },
       {
@@ -123,13 +123,30 @@ export default [
       },
       {
         company: 'Custom Tile',
-        title: 'Self-empoyed tile and stone installer.',
+        title: 'Self-employed tile and stone installer',
         timeframe: '2004 - 2006',
         details: [
           'Negotiated contracts.',
           'Created designs.',
           'Sourced materials.',
           'Performed installations.'
+        ]
+      },
+      {
+        company: 'Personal projects',
+        title: 'anything goes',
+        timeframe: 'then - now',
+        details: [
+          'Forging steel.',
+          'Bending wood.',
+          'Pressing my own oil.',
+          'Powder coating.',
+          'Sawing.',
+          'Making puppets.',
+          'Gardening.',
+          'Making carbon fiber parts for RC helis.',
+          'Casting bronze.',
+          'Building combat robots.'
         ]
       }
     ]

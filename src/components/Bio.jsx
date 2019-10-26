@@ -51,12 +51,13 @@ export default class Bio extends React.Component {
             Writing programs after work for days and then watching the first pulse stream on scope,
             or sending the first message over UART is like a virgin jump with a parachute.
             It's alive! My draw towards electricity grew into something bigger, and while on the crest
-            of that passion, I sought and found a way into the vast world of software engineering.
+            of that passion, I sought and found a way into the vast world of software engineering
+            through web development.
           </p>
           <p>
             &emsp;I would not claim to be talented, and like all humans, have my shortcumings. I like
             to get sidetracked, and enjoy personal projects because they lack time pressure, apart from
-            the ones I set for myself. I like to get lost in details and then find myself again in them.
+            the one I set for myself. I like to get lost in details and then find myself again in them.
             Despite my experience, I still get afraid when appointed lead on a project that is new
             for me and with a price tag of hundreds of thousands of dollars. I don't like to be pushed,
             for fear of dropping something from my attention, but I always have been a self-starter and
