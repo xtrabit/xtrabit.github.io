@@ -47,8 +47,42 @@ header.navigation {
   display: flex;
   text-decoration: none;
   font-size: 1em;
-  color: white;
+  font-weight: bold;
+  color: #ccc;
   padding: 10px;
+}
+
+.navigation a:hover {
+  color: #eee;
+}
+
+.navigation a.selected {
+  color: #6add44;
+  /*color: #6fe747;*/
+}
+
+.navigation a.selected:hover {
+  color: #81ff57;
+  /*color: #7bff4f;*/
+  /*color: #8aff63;*/
+}
+
+.navigation a img {
+  filter: invert(80%);
+}
+
+.navigation a img:hover {
+  filter: invert(90%);
+}
+
+.navigation a img.selected {
+  filter: invert(60%) sepia(100%) hue-rotate(60deg) saturate(300%);
+}
+
+@media only screen and (any-hover) {
+  .navigation a img.selected:hover {
+    filter: invert(75%) sepia(100%) hue-rotate(60deg) saturate(300%);
+  }
 }
 
 main {
@@ -97,7 +131,7 @@ section {
   }
 }
 
-@media only screen and (min-device-width: 811px) {
+@media only screen and (min-device-width: 810px) {
   div.sticky {
     top: calc(21px + 1.5em);
   }

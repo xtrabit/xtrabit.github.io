@@ -79,9 +79,7 @@ export default class App extends React.Component {
     if (this.state.windowWidth <= 810 || str === 'about') {
       shortStr = this.brokenImgNameMap[str];
     }
-    return this.state.selected === str
-      ? <span style={{color: '#6fe747'}}>{shortStr}</span>
-      : shortStr;
+    return shortStr;
   }
 
   getIcon(str) {
@@ -94,10 +92,10 @@ export default class App extends React.Component {
           height='28px'
           alt={str}
           onError={e => this.onBrokenImg(str, e)}
-          style={
+          className={
             this.state.selected === str
-              ? {filter: 'invert(65%) sepia(100%) hue-rotate(60deg) saturate(300%)'}
-              : {filter: 'invert(80%)'}
+              ? 'selected'
+              : ''
           }
         />
       );
@@ -121,6 +119,11 @@ export default class App extends React.Component {
                     <Link
                       to={'/' + name}
                       onClick={() => this.selectLink(name)}
+                      className={
+                        name === this.state.selected
+                          ? 'selected'
+                          : ''
+                      }
                     >
                       {this.getIcon(name)}
                     </Link>
