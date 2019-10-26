@@ -64,6 +64,9 @@ export default class Bio extends React.Component {
             constantly push myself to be better. I do know though, that my understanding of systems and
             processes across many disciplines makes me a good debugger.
           </p>
+          <p>
+            P.S. I am still in regular contact with all of my previous employers.
+          </p>
         </section>
       </main>
     )

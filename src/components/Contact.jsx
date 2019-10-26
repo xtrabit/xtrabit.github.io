@@ -34,7 +34,7 @@ export default class Contact extends React.Component {
             </dd>
             <dt>resume</dt>
             <dd>
-              <a href="/static/Alexei Sorokine Resume.pdf" download>
+              <a href="/static/Alexei Sorokine Resume.pdf" target="_blank">
                 PDF
               </a>
             </dd>
