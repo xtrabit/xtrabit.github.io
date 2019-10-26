@@ -249,3 +249,16 @@ footer.app {
   width: 100%;
   z-index: +1;
 }
+
+.contact dl {
+  text-align: center;
+}
+
+.contact dt {
+  font-weight: bold;
+  margin: 20px 0 10px 0;
+}
+
+.contact dd {
+  margin: 0;
+}
