@@ -12,7 +12,7 @@ export default class Bio extends React.Component {
   render() {
     return (
       <main>
-        <section classNsme='bio'>
+        <section className='bio'>
           <h3>Cliffnotes</h3>
           <p>
             &emsp;I am aware of the difficultly employers face in finding talented candidates

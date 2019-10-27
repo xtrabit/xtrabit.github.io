@@ -23,7 +23,7 @@ export default class Contact extends React.Component {
             <dt>LinkedIn:</dt>
             <dd>
               <a href='https://www.linkedin.com/in/alexei-sorokine/' target="_blank">
-                linkedin.com/in/alexei-sorokine/
+                linkedin.com/in/alexei-sorokine
               </a>
             </dd>
             <dt>GitHub:</dt>
@@ -34,12 +34,10 @@ export default class Contact extends React.Component {
             </dd>
             <dt>resume</dt>
             <dd>
-              <a href="/static/Alexei Sorokine Resume.pdf" target="_blank">
+              <a href="/static/Alexei Sorokine Resume.pdf" target="_blank" className='resume-download'>
                 PDF
               </a>
-            </dd>
-            <dd>
-              <a href="/static/Alexei Sorokine Resume.docx" download>
+              <a href="/static/Alexei Sorokine Resume.docx" download className='resume-download'>
                 MS Word
               </a>
             </dd>

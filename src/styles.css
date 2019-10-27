@@ -262,3 +262,7 @@ footer.app {
 .contact dd {
   margin: 0;
 }
+
+a.resume-download {
+  margin: 0 10px;
+}
