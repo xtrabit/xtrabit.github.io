@@ -1,5 +1,5 @@
 import React from 'react';
-import skills from './skills'
+import skills from './skills.js'
 
 
 export default function() {

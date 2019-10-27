@@ -7,9 +7,9 @@
      <script type="text/javascript">
       (function(loc) {
         if (loc.search) {
-          const url = {};
-          loc.search.slice(1).split('&').forEach(section => {
-            const parts = section.split('=');
+          var url = {};
+          loc.search.slice(1).split('&').forEach(function(section) {
+            var parts = section.split('=');
             url[parts[0]] = parts.slice(1).join('=').replace(/~~~/g, '&');
           });
           if (url.path !== undefined) {

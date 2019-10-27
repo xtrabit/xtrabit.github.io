@@ -4,11 +4,11 @@
     <meta charset="utf-8">
     <title>Redirect to Alexei's page</title>
     <script type="text/javascript">
-      const loc = window.location;
-      const port = loc.port ? ':' + loc.port : '';
-      const uri = loc.protocol + '//' + loc.hostname + port;
-      const path = '/?path=/' + loc.pathname.slice(1).replace(/&/g, '~~~');
-      const params = loc.search ? '&params=' + loc.search.slice(1).replace(/&/g, '~~~') : '';
+      var loc = window.location;
+      var port = loc.port ? ':' + loc.port : '';
+      var uri = loc.protocol + '//' + loc.hostname + port;
+      var path = '/?path=/' + loc.pathname.slice(1).replace(/&/g, '~~~');
+      var params = loc.search ? '&params=' + loc.search.slice(1).replace(/&/g, '~~~') : '';
       loc.replace(uri + path + params + loc.hash);
     </script>
   </head>

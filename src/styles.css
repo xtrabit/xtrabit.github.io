@@ -39,7 +39,6 @@ header.navigation {
 }
 
 .navigation-top-list li {
-  /*margin: 10px;*/
   list-style-type: none;
 }
 
@@ -62,26 +61,18 @@ header.navigation {
 }
 
 .navigation a.selected:hover {
-  color: #81ff57;
-  /*color: #7bff4f;*/
+  /*color: #81ff57;*/
+  color: #7bff4f;
   /*color: #8aff63;*/
 }
 
 .navigation a img {
-  filter: invert(80%);
-}
-
-.navigation a img:hover {
-  filter: invert(90%);
-}
-
-.navigation a img.selected {
-  filter: invert(60%) sepia(100%) hue-rotate(60deg) saturate(300%);
+  opacity: 0.8;
 }
 
 @media only screen and (any-hover) {
-  .navigation a img.selected:hover {
-    filter: invert(75%) sepia(100%) hue-rotate(60deg) saturate(300%);
+  .navigation a img:hover {
+    opacity: 0.95;
   }
 }
 

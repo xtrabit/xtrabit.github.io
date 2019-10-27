@@ -1,12 +1,13 @@
 import React from 'react';
 import { Route, Link } from 'react-router-dom';
 import '../styles.css';
-import Home from './Home';
-import Experience from './Experience';
-import Skills from './Skills';
-import Contact from './Contact';
-import Bio from './Bio';
-import About from './About';
+import Home from './Home.jsx';
+import Experience from './Experience.jsx';
+import Skills from './Skills.jsx';
+import Contact from './Contact.jsx';
+import Bio from './Bio.jsx';
+import Gallery from './Gallery.jsx';
+import About from './About.jsx';
 
 
 export default class App extends React.Component {
@@ -39,6 +40,10 @@ export default class App extends React.Component {
         Component: Bio
       },
       {
+        name: 'gallery',
+        Component: Gallery
+      },
+      {
         name: 'about',
         Component: About
       }
@@ -49,6 +54,7 @@ export default class App extends React.Component {
       'skills': <span>&#x2611;</span>,
       'contact': '@',
       'bio': <span>(&#x30c4;)</span>,
+      'gallery': 'G',
       'about': '?'
     };
   }
@@ -67,7 +73,7 @@ export default class App extends React.Component {
   }
 
   onBrokenImg(str, e) {
-    if (!this.state.brokenImg.includes(str)) {
+    if (!~this.state.brokenImg.indexOf(str)) {
       const state = [...this.state.brokenImg];
       state.push(str);
       this.setState({brokenImg: state});
@@ -83,20 +89,19 @@ export default class App extends React.Component {
   }
 
   getIcon(str) {
-    return this.state.brokenImg.includes(str) || (str !== 'about' && this.state.windowWidth > 810)
+    return ~this.state.brokenImg.indexOf(str) || (str !== 'about' && this.state.windowWidth > 810)
       ? this.getMenuName(str)
       : (
         <img
-          src={`/static/${str}.png`}
+          src={
+            this.state.selected === str
+              ? `/static/${str}_sel.png`
+              : `/static/${str}.png`
+          }
           width='28px'
           height='28px'
           alt={str}
           onError={e => this.onBrokenImg(str, e)}
-          className={
-            this.state.selected === str
-              ? 'selected'
-              : ''
-          }
         />
       );
   }
