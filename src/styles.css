@@ -60,19 +60,19 @@ header.navigation {
   /*color: #6fe747;*/
 }
 
-.navigation a.selected:hover {
-  /*color: #81ff57;*/
-  color: #7bff4f;
-  /*color: #8aff63;*/
-}
-
 .navigation a img {
   opacity: 0.8;
 }
 
-@media only screen and (any-hover) {
+@media only screen and (any-hover: hover), (min-width: 0\0) {
   .navigation a img:hover {
     opacity: 0.95;
+  }
+
+  .navigation a.selected:hover {
+    /*color: #81ff57;*/
+    color: #7bff4f;
+    /*color: #8aff63;*/
   }
 }
 
