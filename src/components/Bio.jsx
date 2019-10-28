@@ -1,16 +1,28 @@
 import React from 'react';
 
 
-export default function() {
+export default function({ windowWidth }) {
   return (
     <main>
+    <div className='backdrop bio' />
       <section className='bio'>
-        <h3>Cliffsnotes</h3>
+      <img src='/static/me_blinds.png' alt='Me in the shadow of blinds.' width='280' height='337'
+        className={
+          windowWidth < 430
+            ? 'stacked'
+            : windowWidth < 560
+              ? 'small'
+              : windowWidth < 1390
+                ? 'floated'
+                : 'wide'
+        }
+      />
         <p>
           &emsp;I am aware of the difficultly employers face in finding talented candidates
           to fill open positions. I was on the other side of the isle on many occasions, and
           this section is my attemp to enhance reader's understanding of who I am.
         </p>
+        <h3>Cliffsnotes</h3>
         <p>
           &emsp;As long as I remember, I always liked making things. My first love was
           electricity. I completed my first circuit at four, and found out that

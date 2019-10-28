@@ -4,6 +4,7 @@ import React from 'react';
 export default function() {
   return (
     <main>
+    <div className='backdrop home' />
       <section className='home'>
         <img src='/static/bender.gif' alt='Bender with a bowtie' height='200' width='266'/>
         <h2>Hi, <nobr>I'm Alexei</nobr></h2>

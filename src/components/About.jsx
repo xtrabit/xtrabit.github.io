@@ -4,7 +4,8 @@ import React from 'react';
 export default function() {
   return (
     <main>
-      <section>
+      <div className='backdrop about' />
+      <section className='about'>
         <p>
           &emsp;This page is built with React and is using react-router-dom.
           Because this page is hosted on GitHub Pages, there is no server side routing to

@@ -48,7 +48,7 @@ header.navigation {
   font-size: 1em;
   font-weight: bold;
   color: #ccc;
-  padding: 10px;
+  padding: 10px 5px;
 }
 
 .navigation a:hover {
@@ -86,12 +86,59 @@ main {
 section {
   text-align: justify;
   width: 770px;
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-left: 10px;
+  padding-left: 10px;
+  margin-right: 10px;
+  padding-right: 10px;
+  min-height: calc(100vh - 76px);
+}
+
+section.home {
+  background-color: hsla(0,0%,0%, 0.8);
+  color: white;
+}
+
+section.bio {
+  background-color: hsla(0,0%,100%, 0.9);
+  color: black;
+}
+
+section.about {
+  /*background-color: hsla(0,0%,100%, 0.9);*/
+  color: white;
+}
+
+section.about a {
+  color: #0FF;
+}
+
+div.backdrop {
+  position: fixed;
+  top: 0;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  opacity: 1;
+  height: 100vh;
+  width: 100vw;
+}
+
+div.home {
+  background-image: url('/static/bckgd_2.jpg');
+}
+
+div.bio {
+  background-image: url('/static/bckgd_4.jpg');
+  /*opacity: 0.5;*/
+}
+
+div.about {
+  background-color: hsla(0,0%,0%, 0.8);
 }
 
 .home h2 {
-  color: #b05f09;
+  color: #e84;
+  /*color: #b05f09;*/
 }
 
 @media only screen and (max-width: 810px), only screen and (max-device-width: 810px) {
@@ -131,6 +178,7 @@ section {
 .home img {
   float: left;
   margin: 0 10px 5px 0;
+  /*background-color: white;*/
 }
 
 section.experience {
@@ -256,4 +304,31 @@ footer.app {
 
 a.resume-download {
   margin: 0 10px;
+}
+
+.bio img {
+  margin: 10px 10px 10px 0;
+}
+
+.bio img.floated {
+  float: left;
+}
+
+.bio img.wide {
+  position: fixed;
+  top: 48px;
+  left: 10px;
+  width: calc((100vw - 850px) / 2);
+  height: calc((100vw - 850px) / 1.67);
+}
+
+.bio img.stacked {
+  width: calc(100vw - 40px);
+  height: calc((100vw - 40px) * 1.2);
+}
+
+.bio img.small {
+  float: left;
+  width: calc(100vw - 280px);
+  height: calc((100vw - 280px) * 1.2);
 }

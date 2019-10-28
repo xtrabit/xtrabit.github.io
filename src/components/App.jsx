@@ -142,7 +142,7 @@ export default class App extends React.Component {
           this.routes.map(({ name, Component }) => (
             <Route
               path={'/' + name} exact
-              component={Component}
+              render={() => <Component windowWidth={this.state.windowWidth} />}
               key={'route_' + name}
             />
           ))
