@@ -6,7 +6,7 @@ export default function() {
     <main>
     <div className='backdrop home' />
       <section className='home'>
-        <img src='/static/bender.gif' alt='Bender with a bowtie' height='200' width='266'/>
+        <img src='/static/self_1_480.jpg' alt='Bender with a bowtie' height='360' width='300'/>
         <h2>Hi, <nobr>I'm Alexei</nobr></h2>
         <p>
           &emsp;I am a software engineer with focus on React-Redux and Django-Python,

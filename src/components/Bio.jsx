@@ -6,10 +6,10 @@ export default function({ windowWidth }) {
     <main>
     <div className='backdrop bio' />
       <section className='bio'>
-      <img src='/static/me_blinds.png' alt='Me in the shadow of blinds.' width='280' height='337'
+      <img src='/static/self_2_480.jpg' alt='Me in the shadow of blinds.' height='337' width='280'
         className={
           windowWidth < 430
-            ? 'stacked'
+            ? 'small'
             : windowWidth < 560
               ? 'small'
               : windowWidth < 1390

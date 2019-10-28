@@ -94,7 +94,7 @@ section {
 }
 
 section.home {
-  background-color: hsla(0,0%,0%, 0.8);
+  background-color: hsla(0,0%,0%, 0.65);
   color: white;
 }
 
@@ -124,11 +124,11 @@ div.backdrop {
 }
 
 div.home {
-  background-image: url('/static/bckgd_2.jpg');
+  background-image: url('/static/bckgd_home_1280.jpg');
 }
 
 div.bio {
-  background-image: url('/static/bckgd_4.jpg');
+  background-image: url('/static/bckgd_bio_1280.jpg');
   /*opacity: 0.5;*/
 }
 
@@ -147,9 +147,9 @@ div.about {
   }
 
   .home img {
-    height: calc(100vw / (810 / 200));
-    width: calc(100vw / (810 / 266));
-    min-height: 100px;
+    height: calc(100vw / (810 / 360));
+    width: calc(100vw / (810 / 300));
+    min-height: 160px;
     min-width: 133px;
   }
 }
@@ -320,6 +320,8 @@ a.resume-download {
   left: 10px;
   width: calc((100vw - 850px) / 2);
   height: calc((100vw - 850px) / 1.67);
+  max-height: 480px;
+  max-width: 400px;
 }
 
 .bio img.stacked {
@@ -331,4 +333,6 @@ a.resume-download {
   float: left;
   width: calc(100vw - 280px);
   height: calc((100vw - 280px) * 1.2);
+  min-height: 160px;
+  min-width: 133px;
 }
