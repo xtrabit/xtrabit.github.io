@@ -6,17 +6,19 @@ export default function({ windowWidth }) {
     <main>
     <div className='backdrop bio' />
       <section className='bio'>
-      <img src='/static/self_2_480.jpg' alt='Me in the shadow of blinds.' height='337' width='280'
-        className={
-          windowWidth < 430
-            ? 'small'
-            : windowWidth < 560
-              ? 'small'
-              : windowWidth < 1390
-                ? 'floated'
-                : 'wide'
+        {
+          //<img src='/static/self_2_480.jpg' alt='Me in the shadow of blinds.' height='337' width='280'
+          //         className={
+          //           windowWidth < 430
+          //             ? 'small'
+          //             : windowWidth < 560
+          //               ? 'small'
+          //               : windowWidth < 1390
+          //                 ? 'floated'
+          //                 : 'wide'
+          //         }
+          //       />
         }
-      />
         <p>
           &emsp;I am aware of the difficultly employers face in finding talented candidates
           to fill open positions. I was on the other side of the isle on many occasions, and

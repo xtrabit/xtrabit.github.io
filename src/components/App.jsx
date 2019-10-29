@@ -17,6 +17,15 @@ export default class App extends React.Component {
       brokenImg: [],
       selected: 'home',
       windowWidth: null,
+      scroll: {
+        home: 0,
+        experience: 0,
+        skills: 0,
+        contact: 0,
+        bio: 0,
+        gallery: 0,
+        info: 0
+      }
     };
     this.routes = [
       {
@@ -70,6 +79,17 @@ export default class App extends React.Component {
       "resize",
       () => this.setState({windowWidth: window.innerWidth})
     );
+    window.addEventListener(
+      'scroll',
+      () => this.saveScroll(window.scrollY)
+    );
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    if (this.state.selected !== prevState.selected) {
+      const position = this.state.scroll[this.state.selected];
+      window.scrollTo(0, position);
+    }
   }
 
   onBrokenImg(str, e) {
@@ -112,6 +132,12 @@ export default class App extends React.Component {
     }
   }
 
+  saveScroll(pos) {
+    const scroll = {...this.state.scroll};
+    scroll[this.state.selected] = pos;
+    this.setState({ scroll });
+  }
+
   render() {
     return (
       <div className='app'>
@@ -142,7 +168,9 @@ export default class App extends React.Component {
           this.routes.map(({ name, Component }) => (
             <Route
               path={'/' + name} exact
-              render={() => <Component windowWidth={this.state.windowWidth} />}
+              render={() => {
+                return <Component windowWidth={this.state.windowWidth} />;
+              }}
               key={'route_' + name}
             />
           ))
