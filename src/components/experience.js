@@ -4,7 +4,7 @@ export default [
     list: [
       {
         company: 'Ridecell',
-        title: 'Backend Engineer Intern (Carsharing)',
+        title: 'Backend Engineer Carsharing',
         timeframe: 'September 2019 - Present',
         details: [
           'Follow Agile methodology.',
